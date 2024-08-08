@@ -17,10 +17,13 @@ Plot the MIRI dither patterns.
 ## JWSTExplorers
 Interactive JWST/MIRI explorers (demo).
 - ExploreCube.py: MIRI/MRS cube explorer. Show the spectrum for each spaxel or the avarage pixel in a specific region.
+
 How to run: python ExploreCube.py mrs_s3d_file
 - ExploreFlags.py: Show the FITS image and translate the DQ value for a specific pixel.
+
 How to run: python ExploreFlags.py jwst_2d_file
 - ExploreRamps.py: Plot the ramps (groups and integrations) of the uncalibrated (if _uncal data available) and calibrated (if _ramp or _jump data available), show the flags for each group and the fitted line (if _fitopt data available). _rate/_jump/(_fitopt) files should be in the same stage0 folder (_uncal) file should be in a ../stage0 folder
+
 How to run: python ExploreRamps.py miri_rate_file
 
 ## MRSWCSCorrection
