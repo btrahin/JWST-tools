@@ -83,10 +83,10 @@ class Explorer():
             '#' * 30,
         )
         print(
-            'Note: Move your mouse on the image to plot the ramp'
+            'Note: Move your mouse over the image to plot the ramp'
         )
         print(
-            'Note: Press x on the image to keep the ramps of the corresponding pixel on the bottom-right subplot.'
+            'Note: Press the spacebar on the image to save the ramp of the corresponding pixel in the bottom-right subplot.'
         )
         print('#' * 30, '\n')
 
@@ -186,7 +186,7 @@ class Explorer():
             self.patch3.remove()
             self.patch4.remove()
             origin = (round(event.xdata), round(event.ydata))
-            print('press %s: x = %i, y = %i'%(event.key,origin[0], origin[1]))
+            print('press spacebar: x = %i, y = %i'%(origin[0], origin[1]))
             square = plt.Rectangle((origin[0]-0.5,origin[1]-0.5), 1,1, ec = 'orangered',fc='None')
             circle = plt.Circle((origin[0],origin[1]), 0.02*self.ramp_data.shape[-1]+self.ramp_data.shape[-2]/self.ramp_data.shape[-1], ec = 'orangered',fc='None',linestyle='--', linewidth=0.6)
             self.patch3 = self.ax1.add_patch(square)
