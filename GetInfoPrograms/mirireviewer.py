@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 def get_reviewer(program):
-    print(program)
+    print(f'Searching for PID {program} info...')
     url = f"https://www.stsci.edu/cgi-bin/get-proposal-info?id={program}&observatory=JWST"
     html = urlopen(url).read()
     soup = BeautifulSoup(html, features="html.parser")
